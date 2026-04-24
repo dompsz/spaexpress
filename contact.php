@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "rezerwacja@spaexpress.pl";
+    $to = "pszczolkowski.stanislaw@wp.pl";
     $subject = "Nowa wiadomość z formularza SpaExpress";
     
     $name = strip_tags(trim($_POST["name"]));
