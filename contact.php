@@ -21,15 +21,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mail($to, $subject, $email_content, $email_headers)) {
         http_response_code(200);
-        // Redirect back with success message or just simple message
-        echo "<h1>Dziękujemy! Twoja wiadomość została wysłana.</h1>";
-        echo "<p><a href='index.html'>Wróć do strony</a></p>";
+        echo "Dziękujemy! Twoja wiadomość została wysłana.";
     } else {
         http_response_code(500);
         echo "Ups! Coś poszło nie tak i nie mogliśmy wysłać Twojej wiadomości.";
     }
 } else {
     http_response_code(403);
-    echo "Wystąpił problem z Twoim zgłoszeniem, spróbuj ponownie.";
+    echo "Wystąpił problem z Twoim zgłoszeniem.";
 }
 ?>
